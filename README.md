@@ -40,6 +40,7 @@ Decimal
 
 Response from light to controller
 ```
+Decimal
 22 | 1 | 0 | 2 | 7 | 
 ```
 
