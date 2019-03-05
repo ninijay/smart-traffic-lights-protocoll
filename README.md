@@ -18,6 +18,11 @@ For this simple protocol, the send and receive packet are the same:
 
 The protocol uses no checks. It's supposed to be unreliable and insecure.
 
+## Additional Features
+
+* Add parity bit?
+* destination and sender IP? or handle via UDP?
+
 ## States
 
 The following states are possible:
