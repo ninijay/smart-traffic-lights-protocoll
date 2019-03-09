@@ -18,10 +18,10 @@ TSTDEPS		:= $(TSTSOURCES:%.c=%.d)
 TSTTARGET	:= $(CURDIR)/tests/runtest
 
 # libs
-CUNITINCDIR	:= $(CURDIR)/../CUnit/include
-CUNITLIBDIR	:= $(CURDIR)/../CUnit/lib
-TSTINCDIR	:= $(CURDIR)/../include
-TSTLIBDIR	:= $(CURDIR)/../lib
+#CUNITINCDIR	:= $(CURDIR)/../CUnit/include
+#CUNITLIBDIR	:= $(CURDIR)/../CUnit/lib
+#TSTINCDIR	:= $(CURDIR)/../include
+#TSTLIBDIR	:= $(CURDIR)/../lib
 
 # full path
 FULLTARGET	:= $(CURDIR)/$(TARGET)
@@ -56,7 +56,7 @@ test:	$(TSTTARGET)
 	@echo "#### $< executed ####"
 
 $(TSTTARGET): $(FULLTARGET) $(TSTOBJECTS)
-	 $(LINK.c) -o $(TSTTARGET) $(TSTOBJECTS) $(OBJECTS) -L$(CUNITLIBDIR) -lcuni    t -L$(TSTLIBDIR) -lprogctest
+	 $(LINK.c) -o $(TSTTARGET) $(TSTOBJECTS) $(OBJECTS) -lcunit -L$(TSTLIBDIR) -lprogctest
 	@echo "#### $@ built ####" 
 
 # create dirs
