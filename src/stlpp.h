@@ -23,6 +23,7 @@ typedef struct stlpp
 } STLPP;
 
 STLPP* makeSTLPP(uint8_t s_id, uint8_t r_id, tl_state c_state, tl_state n_state);
-char* serializeSTLPP(STLPP* packet);
+STLPP* makeSTLPP(char* p);
+char* serializeSTLPP(STLPP* p);
 
 #endif //STLPP_H
